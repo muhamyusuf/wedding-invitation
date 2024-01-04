@@ -32,11 +32,11 @@ export default function LoveStory() {
       <h3 className="font-bold text-[24px]">&#x2022; Married</h3>
       <p>
        InsyaAllah akan dilaksanakan pernikahan, setengah ibadah telah dilakukan.
-       Sesuai Surat An-Nur ayat 32 : “Dan kawinkanlah orang-orang yang sendirian
-       di antara kamu, dan orang-orang yang layak (berkawin) dari hamba-hamba
-       sahayamu yang lelaki dan hamba-hamba sahayamu yang perempuan. Jika mereka
-       miskin Allah akan memampukan mereka dengan karunia-Nya. Dan Allah Maha
-       luas (pemberian-Nya) lagi Maha Mengetahui.“
+       Sesuai Surat An-Nur ayat 32 : &quot;Dan kawinkanlah orang-orang yang
+       sendirian di antara kamu, dan orang-orang yang layak (berkawin) dari
+       hamba-hamba sahayamu yang lelaki dan hamba-hamba sahayamu yang perempuan.
+       Jika mereka miskin Allah akan memampukan mereka dengan karunia-Nya. Dan
+       Allah Maha luas (pemberian-Nya) lagi Maha Mengetahui.&quot;
       </p>
      </div>
     </div>
