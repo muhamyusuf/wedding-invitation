@@ -16,10 +16,13 @@ export default function HomePage() {
      className={`${spumoni.className} flex flex-col justify-center items-center`}
     >
      <span className="text-2xl md:text-5xl">The Wedding Of</span>
-     <span className="text-4xl md:text-7xl">RIZKY & DINDA</span>
+     <span className="text-4xl md:text-[96px] mt-8">
+      <span className="text-[115px]">R</span>IZKY &{' '}
+      <span className="text-[115px]">D</span>INDA
+     </span>
     </h1>
 
-    <p className={`${lemonMilkLight.className}`}>18 FEBRUARI 2024</p>
+    <p className={`${lemonMilkLight.className} mt-10`}>18 FEBRUARI 2024</p>
    </div>
 
    <p className={`${lemonMilkRegular.className}`}>To someone</p>

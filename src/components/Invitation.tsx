@@ -51,7 +51,7 @@ export default function Invitation() {
       />
 
       <button
-       className={`flex group gap-10 border text-sm absolute bottom-10 left-[45px] bg-[#FC571D] py-1 px-5 ${lemonMilkRegular.className}`}
+       className={`flex group gap-10 border text-sm absolute bottom-10 left-[45px] bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
       >
        Google Maps
        <span className="group-hover:translate-x-2 duration-200 ease-in-out">
