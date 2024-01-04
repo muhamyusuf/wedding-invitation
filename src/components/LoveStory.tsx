@@ -9,28 +9,28 @@ export default function LoveStory() {
  return (
   <main className="flex flex-wrap relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-lovestory.png')] bg-cover bg-no-repeat bg-right">
    <div className="text-black">
-    <h2 className="text-[32px] font-bold font-serif ml-5">Love Story</h2>
+    <h2 className="text-[32px] font-bold font-serif text-center">Love Story</h2>
 
     <div
-     className={`w-[581px] h-[472px] flex flex-col gap-10  backdrop-blur-md p-5 rounded-lg border font-serif`}
+     className={`w-[581px] flex flex-col gap-10  backdrop-blur-md p-5 rounded-lg border font-serif`}
     >
      <div>
       <h3 className="font-bold text-[24px]">&#x2022; First Meet</h3>
-      <p>
+      <p className="ml-[17px]">
        Saat menempuh pendidikan dengan jurusan dan fakultas yang sama di
        universitas yang sama juga.
       </p>
      </div>
      <div>
       <h3 className="font-bold text-[24px]">&#x2022; Engagement</h3>
-      <p>
+      <p className="ml-[17px]">
        Alhamdulillah memutuskan untuk ke jenjang yang lebih serius. Atas ridho
        Allah dan orangtua.
       </p>
      </div>
      <div>
       <h3 className="font-bold text-[24px]">&#x2022; Married</h3>
-      <p>
+      <p className="ml-[17px]">
        InsyaAllah akan dilaksanakan pernikahan, setengah ibadah telah dilakukan.
        Sesuai Surat An-Nur ayat 32 : &quot;Dan kawinkanlah orang-orang yang
        sendirian di antara kamu, dan orang-orang yang layak (berkawin) dari
@@ -52,7 +52,7 @@ export default function LoveStory() {
       quality={100}
      />
 
-     <div className="w-[547px] text-black h-full backdrop-blur-md p-5 rounded-lg border font-serif">
+     <div className="w-[550px] text-black h-full backdrop-blur-md p-5 rounded-lg border font-serif">
       What counts in making a happy marriage is not so much how compatible you
       are, but how you deal with incompatibility. A great marriage is not when
       the perfect couple comes together. It is when an imperfect couple learns

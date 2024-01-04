@@ -10,7 +10,7 @@ const lemonMilkLight = localFont({
 
 export default function ProfilWoman() {
  return (
-  <main className="flex flex-wrap relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-profilMan.png')] bg-cover bg-no-repeat bg-center">
+  <main className="flex flex-wrap relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-profilWoman.png')] bg-cover bg-no-repeat bg-center">
    <div className="md:max-w-[50%] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] flex flex-col items-end justify-center gap-10">
     <p
      className={`flex flex-col text-xl text-end items-end justify-center leading-7 ${lemonMilkLight.className}`}

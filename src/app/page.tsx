@@ -1,3 +1,5 @@
+import Footer from '@/components/Footer';
+import Gallery from '@/components/Gallery';
 import HomePage from '@/components/Homepage';
 import Invitation from '@/components/Invitation';
 import LoveStory from '@/components/LoveStory';
@@ -14,6 +16,8 @@ export default function Home() {
    <Quran />
    <Invitation />
    <LoveStory />
+   <Gallery />
+   <Footer />
   </div>
  );
 }
