@@ -2,6 +2,9 @@ import Image from 'next/image';
 import localFont from 'next/font/local';
 
 const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
+const lemonMilkRegular = localFont({
+ src: './font/lemon-milk/LEMONMILK-Regular.otf',
+});
 
 export default function Invitation() {
  return (
@@ -38,13 +41,24 @@ export default function Invitation() {
     </div>
 
     <div className="flex justify-center items-center gap-2 flex-wrap">
-     <Image
-      src="/assets/invitation-3.png"
-      alt="invitation-3"
-      width={680}
-      height={394}
-      quality={100}
-     />
+     <div className="w-[680px] h-[394px] relative">
+      <Image
+       src="/assets/invitation-3.png"
+       alt="invitation-3"
+       width={680}
+       height={394}
+       quality={100}
+      />
+
+      <button
+       className={`flex group gap-10 border text-sm absolute bottom-10 left-[45px] bg-[#FC571D] py-1 px-5 ${lemonMilkRegular.className}`}
+      >
+       Google Maps
+       <span className="group-hover:translate-x-2 duration-200 ease-in-out">
+        &rarr;
+       </span>
+      </button>
+     </div>
      <Image
       src="/assets/invitation-4.png"
       alt="invitation-4"
