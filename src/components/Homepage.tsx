@@ -1,5 +1,4 @@
 import localFont from 'next/font/local';
-import Image from 'next/image';
 
 const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
 const lemonMilkLight = localFont({
