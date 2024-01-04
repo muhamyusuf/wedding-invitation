@@ -43,7 +43,7 @@ export default function Quran() {
      </p>
 
      <p className={`mt-10 ${lemonMilkMedium.className} text-[#3ab3f6]`}>
-      HR. Abu Ya'la
+      HR. Abu Ya &apos;la
      </p>
     </div>
    </div>
