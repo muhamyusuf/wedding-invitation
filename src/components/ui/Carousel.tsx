@@ -2,18 +2,12 @@
 
 import * as React from 'react';
 
-// @ts-check
-// @ts-ignore
-// eslint-disable-next-line import/no-unresolved
-// @ts-nocheck
+// @ts-ingnore
 import useEmblaCarousel, {
  type EmblaCarouselType as CarouselApi,
  type EmblaOptionsType as CarouselOptions,
  type EmblaPluginType as CarouselPlugin,
 } from 'embla-carousel-react';
-
-import UseEmblaCarousel from 'embla-carousel-react';
-
 import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
