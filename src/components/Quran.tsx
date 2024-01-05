@@ -1,18 +1,5 @@
-'use client';
-
 import Image from 'next/image';
 import localFont from 'next/font/local';
-import Autoplay from 'embla-carousel-autoplay';
-
-import * as React from 'react';
-
-import {
- Carousel,
- CarouselContent,
- CarouselItem,
- CarouselNext,
- CarouselPrevious,
-} from '@/components/ui/Carousel';
 
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
@@ -46,31 +33,20 @@ export default function Quran() {
     quality={100}
    />
 
-   <Carousel
-    plugins={[
-     Autoplay({
-      delay: 5000,
-     }),
-    ]}
-    className="relative"
-   >
-    <CarouselContent>
-     {QuranData.map((item, index) => (
-      <CarouselItem key={index}>
-       <div className="bg-[#1C1C26] w-full h-full flex justify-center items-center flex-col lg:px-56 px-2 py-16 text-center rounded-sm">
-        <p className={`${kefirRegular.className}`}>&quot;{item.script}&quot;</p>
+   <div className="flex flex-col">
+    {QuranData.map((item, index) => (
+     <div
+      key={index}
+      className="bg-[#1C1C26] w-full h-full flex justify-center items-center flex-col lg:px-56 px-2 py-16 text-center rounded-sm"
+     >
+      <p className={`${kefirRegular.className}`}>&quot;{item.script}&quot;</p>
 
-        <p className={`mt-10 ${lemonMilkMedium.className} text-[#3ab3f6]`}>
-         {item.location}
-        </p>
-       </div>
-      </CarouselItem>
-     ))}
-    </CarouselContent>
-
-    <CarouselPrevious className="absolute right-1 md:left-5" />
-    <CarouselNext className="absolute right-1 md:right-5" />
-   </Carousel>
+      <p className={`mt-10 ${lemonMilkMedium.className} text-[#3ab3f6]`}>
+       {item.location}
+      </p>
+     </div>
+    ))}
+   </div>
   </main>
  );
 }
