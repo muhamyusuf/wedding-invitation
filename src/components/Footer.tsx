@@ -28,8 +28,8 @@ export default function Footer() {
  return (
   <div className="bg-[#1C1C26] flex flex-col px-10 pb-10 items-center relative w-full">
    <div className="bg-[#3ab3f6] mt-10 flex w-full rounded-sm">
-    <div className="pt-10 px-10 pb-20 flex gap-10">
-     <div className="flex flex-col w-[50%]">
+    <div className="pt-10 px-5 lg:pb-20 flex flex-col gap-20 md:flex-row md:gap-10">
+     <div className="flex flex-col md:w-[50%]">
       <h3 className={`${lemonMilkMedium.className}`}>Wedding Wish</h3>
 
       <p className={`mt-2 ${lemonMilkLight.className} text-[12px]`}>
@@ -74,10 +74,12 @@ export default function Footer() {
       </form>
      </div>
 
-     <div className="flex-grow">
+     <div className="flex-grow flex flex-col z-20">
       <h3 className={`${lemonMilkMedium.className}`}>Wedding Gift</h3>
 
-      <p className={`mt-2 ${lemonMilkLight.className} text-[12px] max-w-[60%]`}>
+      <p
+       className={`mt-2 ${lemonMilkLight.className} text-[12px] md:max-w-[60%]`}
+      >
        Tanpa Mengurangi Rasa Hormat, <br />
        Bagi Anda Yang Ingin Memberikan Tanda Kasih Untuk Mempelai, Dapat Melalui{' '}
        <br />
@@ -105,11 +107,22 @@ export default function Footer() {
         </SheetHeader>
        </SheetContent>
       </Sheet>
+
+      <div className="self-end">
+       <Image
+        className="block lg:hidden"
+        src="/assets/footer-overlay.png"
+        alt="footer-overlay"
+        width={439}
+        height={583}
+        quality={100}
+       />
+      </div>
      </div>
     </div>
    </div>
 
-   <div className="absolute right-10">
+   <div className="absolute z-10 top-0 right-10 hidden lg:block">
     <Image
      src="/assets/footer-overlay.png"
      alt="footer-overlay"

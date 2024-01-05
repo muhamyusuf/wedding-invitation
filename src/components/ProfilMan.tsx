@@ -57,7 +57,7 @@ export default function ProfilMan() {
    </div>
 
    <Image
-    className="absolute opacity-50 md:opacity-100 z-10 bottom-0 -right-10"
+    className="absolute opacity-50 md:opacity-100 z-10 bottom-0 right-10"
     src="/assets/overlay-man.png"
     alt="overlay-man"
     width={314}

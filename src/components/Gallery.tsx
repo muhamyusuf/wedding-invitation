@@ -12,8 +12,8 @@ export default function Gallery() {
    <div className="flex flex-col">
     <h2 className={`${lemonMilkRegular.className} text-[36px]`}>OUR GALLERY</h2>
 
-    <div className="flex border mt-2">
-     <div className="w-[371px] px-2 py-40 bg-[#3ab3f6] flex justify-center items-center">
+    <div className="flex flex-col md:flex-row border mt-2">
+     <div className="px-2 py-10 md:py-14 lg:py-40 bg-[#3ab3f6] flex justify-center items-center">
       <Image
        src="/assets/gallery-overlay.png"
        alt="gallery-overlay"
