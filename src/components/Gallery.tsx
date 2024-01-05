@@ -23,19 +23,19 @@ export default function Gallery() {
       />
      </div>
 
-     <div className="w-[467px] flex flex-wrap">
-      <div className="flex border w-[467px]">
+     <div className="max-w-[467px] flex flex-wrap">
+      <div className="flex border max-w-[467px]">
        <div className="w-1/2 border">grid 1 items 1</div>
        <div className="w-1/2 border">grid 1 items 2</div>
       </div>
 
-      <div className="w-[467px] border">grid 1 items 3</div>
+      <div className="max-w-[467px] border">grid 1 items 3</div>
      </div>
 
-     <div className="w-[467px] flex flex-wrap">
-      <div className="w-[467px] border">grid 2 items 1</div>
+     <div className="max-w-[467px] flex flex-wrap">
+      <div className="max-w-[467px] border">grid 2 items 1</div>
 
-      <div className="flex border w-[467px]">
+      <div className="flex border max-w-[467px]">
        <div className="w-1/2 border">grid 1 items 2</div>
        <div className="w-1/2 border">grid 1 items 3</div>
       </div>
