@@ -1,5 +1,14 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
+import {
+ Sheet,
+ SheetContent,
+ SheetDescription,
+ SheetHeader,
+ SheetTitle,
+ SheetTrigger,
+} from '@/components/ui/Sheet';
+import { MoveRight } from 'lucide-react';
 
 const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
 const kefirRegular = localFont({
@@ -58,8 +67,8 @@ export default function Footer() {
         className={`flex group gap-5 border text-sm absolute right-0 -bottom-14 bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
        >
         Submit
-        <span className="group-hover:translate-x-2 duration-200 ease-in-out">
-         &rarr;
+        <span className="group-hover:translate-x-2 -mt-[2px] duration-200 ease-in-out">
+         <MoveRight />
         </span>
        </button>
       </form>
@@ -75,14 +84,27 @@ export default function Footer() {
        Virtual Account / E-Wallet
       </p>
 
-      <button
-       className={`flex group gap-5 border text-sm mt-10 bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
-      >
-       Kirim Hadiah
-       <span className="group-hover:translate-x-2 duration-200 ease-in-out">
-        &rarr;
-       </span>
-      </button>
+      <Sheet>
+       <SheetTrigger>
+        <button
+         className={`flex group gap-5 border text-sm mt-10 bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
+        >
+         Kirim Hadiah
+         <span className="group-hover:translate-x-2 -mt-[2px] duration-200 ease-in-out">
+          <MoveRight />
+         </span>
+        </button>
+       </SheetTrigger>
+       <SheetContent className="bg-[#1C1C26]" side={'bottom'}>
+        <SheetHeader>
+         <SheetTitle>Are you sure absolutely sure?</SheetTitle>
+         <SheetDescription>
+          This action cannot be undone. This will permanently delete your
+          account and remove your data from our servers.
+         </SheetDescription>
+        </SheetHeader>
+       </SheetContent>
+      </Sheet>
      </div>
     </div>
    </div>
