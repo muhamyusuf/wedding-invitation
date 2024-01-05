@@ -11,7 +11,7 @@ const lemonMilkMedium = localFont({
 
 export default function Quran() {
  return (
-  <main className="relative min-h-screen">
+  <main className="relative">
    <Image
     className="w-full h-full object-cover object-center"
     src="/assets/gallery-quran.png"
@@ -22,7 +22,7 @@ export default function Quran() {
    />
 
    <div className="flex flex-col">
-    <div className="bg-[#1C1C26] w-full h-full flex justify-center items-center flex-col px-56 py-16 text-center">
+    <div className="bg-[#1C1C26] w-full h-full flex justify-center items-center flex-col lg:px-56 px-2 py-16 text-center">
      <p className={`${kefirRegular.className}`}>
       &quot;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
       pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung dan
@@ -36,7 +36,7 @@ export default function Quran() {
      </p>
     </div>
 
-    <div className="bg-[#1C1C26] w-full h-full flex justify-center items-center flex-col px-56 py-16 text-center">
+    <div className="bg-[#1C1C26] w-full h-full flex justify-center items-center flex-col lg:px-56 px-2 py-16 text-center">
      <p className={`${kefirRegular.className}`}>
       &quot;Siapa yang menikah maka sungguh ia telah diberi setengahnya
       ibadah.&quot;

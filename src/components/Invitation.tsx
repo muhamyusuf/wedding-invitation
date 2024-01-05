@@ -9,8 +9,8 @@ const lemonMilkRegular = localFont({
 
 export default function Invitation() {
  return (
-  <main className="flex relative min-h-screen p-2 md:p-20 h-full bg-[url('/assets/background-invitation.png')] bg-cover bg-no-repeat bg-center">
-   <div className="flex absolute  flex-col justify-center items-center h-[80%] top-50 flex-2">
+  <main className="flex relative min-h-screen p-2 md:p-20 h-full bg-[url('/assets/background-invitation.png')] bg-cover bg-no-repeat bg-center flex-col">
+   <div className="flex xl:absolute flex-col justify-center items-center h-[80%] top-50 flex-2">
     <Image
      src="/assets/overlay-invitation.png"
      alt="overlay-invitation"
@@ -33,6 +33,7 @@ export default function Invitation() {
      />
 
      <Image
+      className="flex-grow sm:flex-grow-0"
       src="/assets/invitation-2.png"
       alt="invitation-2"
       width={443}
@@ -42,7 +43,7 @@ export default function Invitation() {
     </div>
 
     <div className="flex justify-center items-center gap-2 flex-wrap">
-     <div className="w-[680px] h-[394px] relative">
+     <div className="relative">
       <Image
        src="/assets/invitation-3.png"
        alt="invitation-3"
@@ -52,7 +53,7 @@ export default function Invitation() {
       />
 
       <button
-       className={`flex group gap-10 border text-sm absolute bottom-10 left-[45px] bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
+       className={`flex group gap-10 border text-sm absolute bottom-10 left-[35px] md:left-[45px] bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
       >
        Google Maps
        <span className="group-hover:translate-x-2 -mt-[2px] duration-200 ease-in-out">
@@ -61,6 +62,7 @@ export default function Invitation() {
       </button>
      </div>
      <Image
+      className="flex-grow sm:flex-grow-0"
       src="/assets/invitation-4.png"
       alt="invitation-4"
       width={279}

@@ -8,11 +8,11 @@ import ProfilWoman from '@/components/ProfilWoman';
 import Quran from '@/components/Quran';
 import AnimatedDisc from '@/components/AnimatedDisc/AnimatedDisc';
 
-export default function Home() {
+export default function Page({ params }: { params: { slug: string } }) {
  return (
   <div>
    <AnimatedDisc />
-   <HomePage />
+   <HomePage recepient={params.slug} />
    <ProfilMan />
    <ProfilWoman />
    <Quran />

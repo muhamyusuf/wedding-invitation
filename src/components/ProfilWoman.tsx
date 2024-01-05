@@ -10,20 +10,20 @@ const lemonMilkLight = localFont({
 
 export default function ProfilWoman() {
  return (
-  <main className="flex flex-wrap relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-profilWoman.png')] bg-cover bg-no-repeat bg-center">
-   <div className="md:max-w-[50%] [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] flex flex-col items-end justify-center gap-10">
+  <main className="flex flex-wrap relative min-h-screen items-center justify-around px-2 md:px-0 py-20 md:p-5 bg-[url('/assets/background-profilWoman.png')] bg-cover bg-no-repeat bg-center">
+   <div className="md:max-w-[50%] w-full [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] flex flex-col items-center justify-center md:items-end gap-10 text-center z-20 md:text-start">
     <p
-     className={`flex flex-col text-xl text-end items-end justify-center leading-7 ${lemonMilkLight.className}`}
+     className={`flex flex-col text-xl text-center md:text-end items-center md:items-end justify-center md:justify-end leading-7 ${lemonMilkLight.className}`}
     >
      <span className="font-bold">Dinda Sakdiah Febriani, S.KM</span>
      <span className="italic">Putri pertama DARI</span>
      Bapak Sodikin & Ibu Ida Rosidah
     </p>
 
-    <div className="flex justify-end mt-10 gap-5">
-     <div className="items-end flex">
+    <div className="flex justify-end mt-5 gap-5 relative">
+     <div className="items-start right-0 flex absolute -top-10 md:relative">
       <Image
-       className="transform rotate-180"
+       className="transform md:rotate-180"
        src="/assets/quotation-mark.png"
        alt="quotation-mark"
        width={34}
@@ -31,7 +31,9 @@ export default function ProfilWoman() {
       />
      </div>
 
-     <p className={`md:max-w-[80%] text-lg text-end ${kefirRegular.className}`}>
+     <p
+      className={`md:max-w-[80%] lg:text-lg md:text-[16px] text-sm text-center md:text-end ${kefirRegular.className}`}
+     >
       DINDA SAKDIAH FEBRIANI, perempuan cantik, manis, imut, lucu, penyabar,
       pengertian, baik hati, dan lemah lembut. Perempuan yang tidak pernah lelah
       menghadapi pribadiku, perempuan yang selalu sabar saat diriku marah besar,
@@ -43,7 +45,7 @@ export default function ProfilWoman() {
     </div>
    </div>
 
-   <div>
+   <div className="mt-10 md:mt-0">
     <Image
      src="/assets/profile-woman.png"
      alt="profil-woman"
@@ -54,7 +56,7 @@ export default function ProfilWoman() {
    </div>
 
    <Image
-    className="absolute top-0 left-10"
+    className="absolute opacity-50 md:opacity-100 z-10 top-0 left-10"
     src="/assets/overlay-woman.png"
     alt="overlay-woman"
     width={250}

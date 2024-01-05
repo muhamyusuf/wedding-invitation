@@ -7,7 +7,7 @@ const palatino = localFont({
 
 export default function LoveStory() {
  return (
-  <main className="flex flex-wrap relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-lovestory.png')] bg-cover bg-no-repeat bg-right">
+  <main className="flex flex-wrap flex-col md:flex-row relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-lovestory.png')] bg-cover bg-no-repeat bg-right">
    <div className="text-black">
     <h2 className="text-[32px] font-bold font-serif text-center">Love Story</h2>
 
