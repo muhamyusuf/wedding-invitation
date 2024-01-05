@@ -1,0 +1,17 @@
+/* AnimatedDisc.module.css */
+.discAnimation {
+ animation: discSpin 10s linear infinite;
+}
+
+.paused {
+ animation-play-state: paused;
+}
+
+@keyframes discSpin {
+ from {
+  transform: rotate(0deg);
+ }
+ to {
+  transform: rotate(360deg);
+ }
+}

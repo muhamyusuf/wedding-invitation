@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import localFont from 'next/font/local';
 
 export const metadata: Metadata = {
  title: 'Rizki & Dinda',
@@ -14,7 +13,7 @@ export default function RootLayout({
 }) {
  return (
   <html lang="en">
-   <body className={`scrollbar-none`}>{children}</body>
+   <body className={`scrollbar-none relative`}>{children}</body>
   </html>
  );
 }
