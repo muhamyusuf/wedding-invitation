@@ -26,7 +26,7 @@ const lemonMilkRegular = localFont({
 
 export default function Footer() {
  return (
-  <div className="bg-[#1C1C26] flex flex-col px-10 pb-10 items-center relative w-full">
+  <div className="bg-[#1C1C26] flex flex-col px-5 md:px-10 pb-10 items-center relative w-full">
    <div className="bg-[#3ab3f6] mt-10 flex w-full rounded-sm">
     <div className="pt-10 px-5 lg:pb-20 flex flex-col gap-20 md:flex-row md:gap-10">
      <div className="flex flex-col md:w-[50%]">
