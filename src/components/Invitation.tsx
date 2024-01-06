@@ -6,6 +6,9 @@ const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
 const lemonMilkRegular = localFont({
  src: './font/lemon-milk/LEMONMILK-Regular.otf',
 });
+const lemonMilkBold = localFont({
+ src: './font/lemon-milk/LEMONMILK-Bold.otf',
+});
 
 export default function Invitation() {
  return (
@@ -24,43 +27,97 @@ export default function Invitation() {
 
    <div className="flex flex-wrap justify-end items-start gap-2">
     <div className="flex justify-center items-center gap-2 flex-wrap">
-     <Image
-      src="/assets/invitation-1.png"
-      alt="invitation-1"
-      width={516}
-      height={339}
-      quality={100}
-     />
-
-     <Image
-      className="flex-grow sm:flex-grow-0"
-      src="/assets/invitation-2.png"
-      alt="invitation-2"
-      width={443}
-      height={339}
-      quality={100}
-     />
-    </div>
-
-    <div className="flex justify-center items-center gap-2 flex-wrap">
-     <div className="relative">
+     <div className="max-w-[516px]">
       <Image
-       src="/assets/invitation-3.png"
-       alt="invitation-3"
-       width={680}
-       height={394}
+       src="/assets/invitation-1.png"
+       alt="invitation-1"
+       width={516}
+       height={339}
        quality={100}
       />
-
-      <button
-       className={`flex group gap-10 border text-sm absolute bottom-10 left-[35px] md:left-[45px] bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
-      >
-       Google Maps
-       <span className="group-hover:translate-x-2 -mt-[2px] duration-200 ease-in-out">
-        <MoveRight />
-       </span>
-      </button>
      </div>
+
+     <div className="bg-[#109CEB] flex-grow-0 min-h-[339px] flex flex-col items-end justify-around px-5 md:md:px-10 py-5 border-[3px] lg:max-w-[443px] h-fill relative">
+      <h2 className={`${lemonMilkBold.className} text-[32px] z-20`}>
+       AKAD NIKAH
+      </h2>
+
+      <div className="text-end z-20">
+       <p className={`${spumoni.className} text-[36px]`}>
+        Minggu 18 Febuari 2024
+       </p>
+       <p className={`${lemonMilkRegular.className} text-[16px]`}>
+        11.00 WIB - 14.00 WIB
+       </p>
+      </div>
+
+      <p className={`${lemonMilkRegular.className} text-[16px] text-end z-20`}>
+       Joglo Asri Sari Kuring Indah <br /> Jl. Raya Cilegon, Sukmajaya, Kec
+       Jombang, Kota Cilegon, Banten 42416
+      </p>
+
+      <div className="absolute left-2 top-4 flex flex-col justify-around z-10 opacity-50 md:opacity-100">
+       <Image
+        src="/assets/overlay-akadnikah.png"
+        alt="overlay-akadnikah"
+        width={104}
+        height={138}
+        quality={100}
+       />
+      </div>
+     </div>
+    </div>
+
+    <div className="flex justify-center gap-2 flex-wrap">
+     <div className="bg-[#109CEB] min-h-[400px] flex flex-col justify-around px-5 md:md:px-10 py-5 border-[3px] max-w-[680px] h-fill relative">
+      <h2 className={`${lemonMilkBold.className} text-[32px] z-20`}>RESEPSI</h2>
+
+      <div className="z-20">
+       <p className={`${spumoni.className} text-[36px]`}>
+        Minggu 18 Febuari 2024
+       </p>
+       <p className={`${lemonMilkRegular.className} text-[16px]`}>
+        11.00 WIB - 14.00 WIB
+       </p>
+      </div>
+
+      <p
+       className={`${lemonMilkRegular.className} text-[16px] md:max-w-[60%] z-20`}
+      >
+       Joglo Asri Sari Kuring Indah Jl. Raya Cilegon, Sukmajaya, Kec Jombang,
+       Kota Cilegon, Banten 42416
+      </p>
+
+      <div className="z-20">
+       <button
+        className={`flex group gap-10 border text-sm bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
+       >
+        Google Maps
+        <span className="group-hover:translate-x-2 -mt-[2px] duration-200 ease-in-out">
+         <MoveRight />
+        </span>
+       </button>
+      </div>
+
+      <div className="absolute right-5 flex flex-col justify-around z-10 opacity-50 md:opacity-100">
+       <Image
+        src="/assets/overlay-resepsi-1.png"
+        alt="overlay-resepsi-1"
+        width={213}
+        height={211}
+        quality={100}
+       />
+
+       <Image
+        src="/assets/overlay-resepsi-2.png"
+        alt="overlay-resepsi-2"
+        width={160}
+        height={114}
+        quality={100}
+       />
+      </div>
+     </div>
+
      <Image
       className="flex-grow sm:flex-grow-0"
       src="/assets/invitation-4.png"
