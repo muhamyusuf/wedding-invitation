@@ -7,12 +7,12 @@ const palatino = localFont({
 
 export default function LoveStory() {
  return (
-  <main className="flex flex-col md:flex-row relative min-h-screen items-center justify-around py-10 px-2 md:py-10 md:px-10 lg:px-20 lg:py-20 bg-[url('/assets/background-lovestory.png')] bg-cover bg-no-repeat bg-right gap-10">
+  <main className="flex flex-col md:flex-row relative min-h-screen items-center justify-around py-10 px-2 md:py-10 md:px-10 lg:px-20 lg:py-20 bg-[url('/assets/background-lovestory.png')] bg-cover bg-no-repeat bg-right gap-10 border-y-2">
    <div className="text-black flex-1">
     <h2 className="text-[32px] font-bold font-serif text-center">Love Story</h2>
 
     <div
-     className={`flex flex-col gap-10  backdrop-blur-md p-5 rounded-lg border font-serif`}
+     className={`flex flex-col gap-10 backdrop-blur-md p-5 rounded-lg border font-serif`}
     >
      <div>
       <h3 className="font-bold text-[24px]">&#x2022; First Meet</h3>

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { MoveRight } from 'lucide-react';
+import Link from 'next/link';
 
 const lemonMilkRegular = localFont({
  src: './font/lemon-milk/LEMONMILK-Regular.otf',
@@ -8,12 +9,12 @@ const lemonMilkRegular = localFont({
 
 export default function Gallery() {
  return (
-  <main className="flex relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-gallery.png')] bg-cover bg-no-repeat bg-center">
+  <main className="flex relative min-h-screen items-center justify-around p-2 md:p-5 bg-[url('/assets/background-gallery.png')] bg-cover bg-no-repeat bg-center border-y-2">
    <div className="flex flex-col">
     <h2 className={`${lemonMilkRegular.className} text-[36px]`}>OUR GALLERY</h2>
 
-    <div className="flex flex-col md:flex-row border mt-2">
-     <div className="px-2 py-10 md:py-14 lg:py-40 bg-[#109CEB] flex justify-center items-center">
+    <div className="flex flex-col md:flex-row border-2 mt-2">
+     <div className="px-2 py-10 md:px-6 md:py-14 lg:py-40 bg-[#109CEB] flex justify-center items-center">
       <Image
        src="/assets/gallery-overlay.png"
        alt="gallery-overlay"
@@ -42,7 +43,10 @@ export default function Gallery() {
      </div>
     </div>
 
-    <div className="self-end">
+    <Link
+     className="self-end"
+     href="https://drive.google.com/drive/folders/1pSHGiga2jtbbSDDtF5kAbbeLdUxHaH_N"
+    >
      <button
       className={`flex group gap-5 border text-sm mt-10 bg-transoarent py-2 px-5 ${lemonMilkRegular.className}`}
      >
@@ -51,7 +55,7 @@ export default function Gallery() {
        <MoveRight />
       </span>
      </button>
-    </div>
+    </Link>
    </div>
   </main>
  );

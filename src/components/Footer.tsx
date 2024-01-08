@@ -24,6 +24,24 @@ const lemonMilkRegular = localFont({
  src: './font/lemon-milk/LEMONMILK-Regular.otf',
 });
 
+const Gift = [
+ {
+  logo: '/assets/gift/bca.png',
+  nomor: '7610982047',
+  nama: 'MUHAMMAD RIZKY ALGIFARI',
+ },
+ {
+  logo: '/assets/gift/mandiri.png',
+  nomor: '1180010141694',
+  nama: 'MUHAMMAD RIZKY ALGIFARI',
+ },
+ {
+  logo: '/assets/gift/ovodana.png',
+  nomor: '085161601208',
+  nama: 'MUHAMMAD RIZKY ALGIFARI',
+ },
+];
+
 export default function Footer() {
  return (
   <div className="bg-[#1C1C26] flex flex-col px-5 md:px-10 pb-10 items-center relative w-full">
@@ -97,14 +115,34 @@ export default function Footer() {
          </span>
         </button>
        </SheetTrigger>
-       <SheetContent className="bg-[#1C1C26]" side={'bottom'}>
-        <SheetHeader>
-         <SheetTitle>Are you sure absolutely sure?</SheetTitle>
-         <SheetDescription>
-          This action cannot be undone. This will permanently delete your
-          account and remove your data from our servers.
-         </SheetDescription>
-        </SheetHeader>
+       <SheetContent
+        className="bg-[#FC571D] py-10 md:py-20 flex md:flex-row flex-col"
+        side={'bottom'}
+       >
+        {Gift.map((item, index) => (
+         <div
+          className="border border-white/20 shadow-sm rounded-xl px-4 py-6 bg-gradient-to-br flex-grow from-white/30 to-white/10"
+          key={index}
+         >
+          <div className="h-[47px] w-[150px] flex justify-center items-center">
+           <Image
+            src={item.logo}
+            alt="logo"
+            width={150}
+            height={50}
+            quality={100}
+           />
+          </div>
+          <div className={`${lemonMilkLight.className} mt-10 md:mt-20`}>
+           <p className="text-[20px] text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400">
+            {item.nomor}
+           </p>
+           <p className="text-[16px] text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400">
+            {item.nama}
+           </p>
+          </div>
+         </div>
+        ))}
        </SheetContent>
       </Sheet>
 

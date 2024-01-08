@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
+import { Instagram, MoveRight } from 'lucide-react';
+import Link from 'next/link';
 
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
@@ -20,19 +22,9 @@ export default function ProfilWoman() {
      Bapak Sodikin & Ibu Ida Rosidah
     </p>
 
-    <div className="flex justify-end mt-5 gap-5 relative">
-     <div className="items-start right-0 flex absolute -top-10 md:relative">
-      <Image
-       className="transform md:rotate-180"
-       src="/assets/quotation-mark.png"
-       alt="quotation-mark"
-       width={34}
-       height={30}
-      />
-     </div>
-
+    <div className="flex justify-end mt-5 flex-col gap-5 relative">
      <p
-      className={`md:max-w-[80%] lg:text-lg md:text-[16px] text-sm text-center md:text-end ${kefirRegular.className}`}
+      className={`md:max-w-[80%] md:self-end lg:text-lg md:text-[16px] text-sm text-center md:text-end ${kefirRegular.className}`}
      >
       DINDA SAKDIAH FEBRIANI, perempuan cantik, manis, imut, lucu, penyabar,
       pengertian, baik hati, dan lemah lembut. Perempuan yang tidak pernah lelah
@@ -42,6 +34,18 @@ export default function ProfilWoman() {
       Allah pada ku setelah ibuku.
       <br /> <br />I love you a lot and it &#x2019; s always been you
      </p>
+
+     <Link className="md:self-end" href="https://www.instagram.com/dindasdf_/">
+      <button
+       className={`flex group gap-5 border-2 items-center mt-10 bg-transoarent py-2 px-5 font-serif text-[16px]`}
+      >
+       <Instagram className="text-white" />
+       @dindasdf_
+       <span className="group-hover:translate-x-2 -mt-[2px] duration-200 ease-in-out text-[#FC571D]">
+        <MoveRight />
+       </span>
+      </button>
+     </Link>
     </div>
    </div>
 

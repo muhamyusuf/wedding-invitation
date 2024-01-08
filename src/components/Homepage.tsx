@@ -20,17 +20,17 @@ export default function HomePage({ recepient }: params) {
      className={`${spumoni.className} flex flex-col justify-center items-center`}
     >
      <span className="text-2xl md:text-5xl">The Wedding Of</span>
-     <span className="text-[56px] md:text-[96px] mt-8">
+     <span className="text-[56px] md:text-[96px] -mt-8">
       <span className="text-[75px] md:text-[115px]">R</span>IZKY &{' '}
       <span className="text-[75px] md:text-[115px]">D</span>INDA
      </span>
     </h1>
 
-    <p className={`${lemonMilkLight.className} mt-10`}>18 FEBRUARI 2024</p>
+    <p className={`${lemonMilkLight.className} mt-10`}>24 FEBRUARI 2024</p>
    </div>
 
-   <p className={`${lemonMilkRegular.className}`}>
-    To {`${recepient ? recepient : 'Guest'}`}
+   <p className={`${lemonMilkRegular.className} md:text-[24px]`}>
+    DEAR/TO {`${recepient ? recepient : 'Guest'}`}
    </p>
   </main>
  );

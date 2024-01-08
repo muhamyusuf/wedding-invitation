@@ -23,7 +23,7 @@ const QuranData = [
 
 export default function Quran() {
  return (
-  <main className="relative">
+  <main className="relative border-y-2">
    <Image
     className="w-full h-full object-cover object-center"
     src="/assets/gallery-quran.png"

@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { MoveRight } from 'lucide-react';
+import Link from 'next/link';
 
 const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
 const lemonMilkRegular = localFont({
@@ -74,7 +75,7 @@ export default function Invitation() {
 
       <div className="z-20">
        <p className={`${spumoni.className} text-[36px]`}>
-        Minggu 18 Febuari 2024
+        Minggu 24 Febuari 2024
        </p>
        <p className={`${lemonMilkRegular.className} text-[16px]`}>
         11.00 WIB - 14.00 WIB
@@ -84,11 +85,12 @@ export default function Invitation() {
       <p
        className={`${lemonMilkRegular.className} text-[16px] md:max-w-[60%] z-20`}
       >
-       Joglo Asri Sari Kuring Indah Jl. Raya Cilegon, Sukmajaya, Kec Jombang,
-       Kota Cilegon, Banten 42416
+       Jl. Komp. Interkota Indah Blok C3 No.1-2, RT.12/RW.7, Duri Kosambi,
+       Kecamatan Cengkareng, Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta
+       11750
       </p>
 
-      <div className="z-20">
+      <Link href="https://goo.gl/maps/Bp2bdATvDRiUk5UF6" className="z-20">
        <button
         className={`flex group gap-10 border text-sm bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
        >
@@ -97,33 +99,25 @@ export default function Invitation() {
          <MoveRight />
         </span>
        </button>
-      </div>
+      </Link>
 
       <div className="absolute right-5 flex flex-col justify-around z-10 opacity-50 md:opacity-100">
        <Image
-        src="/assets/overlay-resepsi-1.png"
-        alt="overlay-resepsi-1"
-        width={213}
-        height={211}
-        quality={100}
-       />
-
-       <Image
-        src="/assets/overlay-resepsi-2.png"
-        alt="overlay-resepsi-2"
-        width={160}
-        height={114}
+        src="/assets/overlay-resepsi.png"
+        alt="overlay-resepsi"
+        width={203}
+        height={296}
         quality={100}
        />
       </div>
      </div>
 
      <Image
-      className="flex-grow sm:flex-grow-0"
+      className="flex-grow sm:flex-grow-0 md:w-[279px] md:h-[396px]"
       src="/assets/invitation-4.png"
       alt="invitation-4"
-      width={279}
-      height={396}
+      width={1116}
+      height={1579}
       quality={100}
      />
     </div>

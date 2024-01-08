@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
+import { Instagram, MoveRight } from 'lucide-react';
+import Link from 'next/link';
 
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
@@ -7,10 +9,13 @@ const kefirRegular = localFont({
 const lemonMilkLight = localFont({
  src: './font/lemon-milk/LEMONMILK-Light.otf',
 });
+const lemonMilkRegular = localFont({
+ src: './font/lemon-milk/LEMONMILK-Regular.otf',
+});
 
 export default function ProfilMan() {
  return (
-  <main className="flex flex-wrap relative min-h-screen items-center justify-around px-2 md:px-0 py-20 md:p-5 bg-[url('/assets/background-profilMan.png')] bg-cover bg-no-repeat bg-center">
+  <main className="flex flex-wrap relative min-h-screen items-center justify-around px-2 md:px-0 py-20 md:p-5 bg-[url('/assets/background-profilMan.png')] bg-cover bg-no-repeat bg-center border-y-2">
    <div>
     <Image
      className="w-[300px] h-full md:w-[340px]"
@@ -31,7 +36,7 @@ export default function ProfilMan() {
      Bapak Riyanto, SH & Ibu Linda Yasmita
     </p>
 
-    <div className="flex mt-2 md:mt-10 gap-5 relative">
+    <div className="flex mt-2 md:mt-10 gap-5 relative flex-col">
      <p
       className={`md:max-w-[80%] text-sm md:text-[16px] lg:text-lg ${kefirRegular.className}`}
      >
@@ -45,14 +50,20 @@ export default function ProfilMan() {
       love you a lot and it &#x2019; s always been you
      </p>
 
-     <div className="items-end md:items-start right-0 flex absolute -top-10 md:relative">
-      <Image
-       src="/assets/quotation-mark.png"
-       alt="quotation-mark"
-       width={34}
-       height={30}
-      />
-     </div>
+     <Link
+      className="md:self-start"
+      href="https://www.instagram.com/rizkygifarii/"
+     >
+      <button
+       className={`flex font-serif items-center group gap-5 border-2 text-[16px] mt-10 bg-transoarent py-2 px-5`}
+      >
+       <Instagram className="text-white" />
+       @rizkygifarii
+       <span className="group-hover:translate-x-2 duration-200 ease-in-out text-[#FC571D]">
+        <MoveRight />
+       </span>
+      </button>
+     </Link>
     </div>
    </div>
 
