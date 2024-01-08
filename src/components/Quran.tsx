@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
+import Carousel from './ui/Carousel';
 
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
@@ -33,20 +34,7 @@ export default function Quran() {
     quality={100}
    />
 
-   <div className="flex flex-col">
-    {QuranData.map((item, index) => (
-     <div
-      key={index}
-      className="bg-[#1C1C26] w-full h-full flex justify-center items-center flex-col lg:px-56 px-2 py-16 text-center rounded-sm"
-     >
-      <p className={`${kefirRegular.className}`}>&quot;{item.script}&quot;</p>
-
-      <p className={`mt-10 ${lemonMilkMedium.className} text-[#3ab3f6]`}>
-       {item.location}
-      </p>
-     </div>
-    ))}
-   </div>
+   <Carousel />
   </main>
  );
 }
