@@ -14,7 +14,7 @@ export default function Gallery() {
     <h2 className={`${lemonMilkRegular.className} text-[36px]`}>OUR GALLERY</h2>
 
     <div className="flex flex-col md:flex-row border-2 mt-2">
-     <div className="px-2 py-10 md:px-6 md:py-14 lg:py-40 bg-[#109CEB] flex justify-center items-center">
+     <div className="px-2 py-10 md:px-6 md:py-14 lg:py-20 bg-[#109CEB] flex justify-center items-center">
       <Image
        src="/assets/gallery-overlay.png"
        alt="gallery-overlay"
@@ -25,20 +25,68 @@ export default function Gallery() {
      </div>
 
      <div className="max-w-[467px] flex flex-wrap">
-      <div className="flex border max-w-[467px]">
-       <div className="w-1/2 border">grid 1 items 1</div>
-       <div className="w-1/2 border">grid 1 items 2</div>
+      <div className="flex max-w-[467px]">
+       <div className="w-1/2 border">
+        <Image
+         src={`/assets/gallery/gallery-item-1.png`}
+         alt={'gallery-item-1'}
+         width={924}
+         height={960}
+         quality={100}
+        />
+       </div>
+       <div className="w-1/2 border">
+        <Image
+         src={`/assets/gallery/gallery-item-2.png`}
+         alt={'gallery-item-2'}
+         width={928}
+         height={960}
+         quality={100}
+        />
+       </div>
       </div>
 
-      <div className="max-w-[467px] border">grid 1 items 3</div>
+      <div className="max-w-[467px] border">
+       <Image
+        src={`/assets/gallery/gallery-item-3.png`}
+        alt={'gallery-item-3'}
+        width={1860}
+        height={960}
+        quality={100}
+       />
+      </div>
      </div>
 
      <div className="max-w-[467px] flex flex-wrap">
-      <div className="max-w-[467px] border">grid 2 items 1</div>
+      <div className="max-w-[467px] border">
+       <Image
+        src={`/assets/gallery/gallery-item-4.png`}
+        alt={'gallery-item-4'}
+        width={1860}
+        height={960}
+        quality={100}
+       />
+      </div>
 
-      <div className="flex border max-w-[467px]">
-       <div className="w-1/2 border">grid 1 items 2</div>
-       <div className="w-1/2 border">grid 1 items 3</div>
+      <div className="flex max-w-[467px]">
+       <div className="w-1/2 border">
+        <Image
+         src={`/assets/gallery/gallery-item-5.png`}
+         alt={'gallery-item-5'}
+         width={928}
+         height={960}
+         quality={100}
+        />
+       </div>
+       <div className="w-1/2 border">
+        <Image
+         src={`/assets/gallery/gallery-item-6.png`}
+         alt={'gallery-item-6'}
+         width={924}
+         height={960}
+         quality={100}
+        />
+       </div>
       </div>
      </div>
     </div>

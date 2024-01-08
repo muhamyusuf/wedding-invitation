@@ -47,7 +47,7 @@ export default function Footer() {
   <div className="bg-[#1C1C26] flex flex-col px-5 md:px-10 pb-10 items-center relative w-full">
    <div className="bg-[#109CEB] mt-10 flex w-full rounded-sm">
     <div className="pt-10 px-5 lg:pb-20 flex flex-col gap-20 md:flex-row md:gap-10">
-     <div className="flex flex-col md:w-[50%]">
+     <div className="flex flex-col md:w-[50%] flex-grow md:flex-grow-0">
       <h3 className={`${lemonMilkMedium.className}`}>Wedding Wish</h3>
 
       <p className={`mt-2 ${lemonMilkLight.className} text-[12px]`}>
