@@ -27,7 +27,7 @@ export default function Invitation() {
    </div>
 
    <div className="flex flex-wrap justify-end items-start gap-2">
-    <div className="flex justify-center items-center gap-2 flex-wrap relative">
+    <div className="flex justify-center items-center gap-2 flex-wrap relative w-full lg:w-fit">
      <div className="overflow-hidden">
       <Image
        src="/assets/invitation-1.png"
@@ -35,11 +35,11 @@ export default function Invitation() {
        width={516}
        height={339}
        quality={100}
-       className="max-w-[516px] bg-cover h-[360px] border"
+       className="w-full lg:max-w-[516px] bg-cover h-[339px] lg:h-[360px] border"
       />
      </div>
 
-     <div className="bg-[#109CEB] max-w-[516px] flex-grow-0 min-h-[339px] flex flex-col overflow-hidden border-[3px] lg:max-w-[443px] h-fill relative">
+     <div className="bg-[#109CEB] lg:max-w-[443px] max-w-[516px] flex-grow-0 min-h-[339px] flex flex-col overflow-hidden border-[3px] h-fill relative">
       <iframe
        width="fill"
        height="248"
@@ -65,7 +65,7 @@ export default function Invitation() {
      </div>
     </div>
 
-    <div className="flex justify-center gap-2 flex-wrap">
+    <div className="flex justify-center gap-2 flex-wrap lg:max-w-[967px]">
      <div className="bg-[#109CEB] max-w-[516px] min-h-[400px] flex flex-col justify-around px-5 md:md:px-10 py-5 border-[3px] md:max-w-[680px] h-fill relative">
       <h2 className={`${lemonMilkBold.className} text-[32px] z-20`}>RESEPSI</h2>
 
