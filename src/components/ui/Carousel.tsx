@@ -91,11 +91,11 @@ export default function Carousel() {
      <div
       key={index}
       ref={carouselItemRef}
-      className="flex-shrink-0 overflow-hidden bg-[#1C1C26] w-full h-[250px] flex flex-col items-center text-white lg:px-50 px-10 sm:px-16 py-16 relative"
+      className="flex-shrink-0 overflow-hidden bg-[#1C1C26] w-full h-[250px] flex flex-col items-center text-white lg:px-44 px-10 sm:px-16 py-16 relative"
       data-index={`data-${index}`}
      >
       <p
-       className={`"px-2 md:mt-2 z-20 font-medium text-[10px] md:text-[14px] text-white rounded-lg text-center w-fit ${kefirRegular.className}`}
+       className={`"px-2 md:mt-2 z-20 font-medium text-[10px] md:text-[14px] lg:text-[18px] text-white rounded-lg text-center w-fit ${kefirRegular.className}`}
       >
        &quot;{item.script}&quot;
       </p>
@@ -152,7 +152,7 @@ export default function Carousel() {
     </div>
    </div>
 
-   <div className="flex items-center z-50 justify-center w-full mt-3 absolute bottom-0 mx-auto py-5">
+   <div className="flex items-center z-50 justify-center w-full mt-3 absolute bottom-0 mx-auto pt-5 pb-2">
     {QuranData.map((_, index) => (
      <button
       key={index}
