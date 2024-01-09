@@ -1,13 +1,6 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
-import {
- Sheet,
- SheetContent,
- SheetDescription,
- SheetHeader,
- SheetTitle,
- SheetTrigger,
-} from '@/components/ui/Sheet';
+import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/Sheet';
 import { MoveRight } from 'lucide-react';
 import MaxWidthWrapper from './MaxWidthWrapper';
 
@@ -49,7 +42,7 @@ export default function Footer() {
    <MaxWidthWrapper className=" flex flex-col px-5 md:px-10 pb-10 items-center relative w-full">
     <div className="bg-[#109CEB] mt-10 flex w-full rounded-sm">
      <div className="pt-10 px-5 lg:pb-20 flex flex-col gap-20 md:flex-row md:gap-10">
-      <div className="flex flex-col md:w-[50%] flex-grow md:flex-grow-0">
+      <div className="flex flex-col md:w-[50%] w-full flex-grow md:flex-grow-0">
        <h3 className={`${lemonMilkMedium.className}`}>Wedding Wish</h3>
 
        <p className={`mt-2 ${lemonMilkLight.className} text-[12px]`}>
@@ -58,7 +51,7 @@ export default function Footer() {
 
        <form
         action="#"
-        className={`${lemonMilkRegular.className} relative text-white w-full flex gap-3 flex-col mt-5`}
+        className={`${lemonMilkRegular.className} w-[250px] min-[375px]:w-[300px] min-[425px]:w-[350px] relative text-white flex gap-3 flex-col mt-5`}
        >
         <input
          type="text"

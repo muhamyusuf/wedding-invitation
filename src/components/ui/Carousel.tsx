@@ -3,7 +3,6 @@
 import { useState, useRef, MouseEvent } from 'react';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
 import localFont from 'next/font/local';
 
 const kefirRegular = localFont({
@@ -92,17 +91,17 @@ export default function Carousel() {
      <div
       key={index}
       ref={carouselItemRef}
-      className="flex-shrink-0 overflow-hidden bg-[#1C1C26] w-full h-[250px] flex flex-col items-center text-white lg:px-56 px-2 py-16 relative"
+      className="flex-shrink-0 overflow-hidden bg-[#1C1C26] w-full h-[250px] flex flex-col items-center text-white lg:px-50 px-10 sm:px-16 py-16 relative"
       data-index={`data-${index}`}
      >
       <p
-       className={`"px-2 md:mt-2 font-medium text-[10px] md:text-[14px] text-white rounded-lg text-center w-fit ${kefirRegular.className}`}
+       className={`"px-2 md:mt-2 z-20 font-medium text-[10px] md:text-[14px] text-white rounded-lg text-center w-fit ${kefirRegular.className}`}
       >
        &quot;{item.script}&quot;
       </p>
 
       <p
-       className={`mt-5 md:mt-10 text-lg text-[#109CEB] ${lemonMilkMedium.className}`}
+       className={`mt-5 md:mt-10 z-20 text-lg text-[#109CEB] ${lemonMilkMedium.className}`}
       >
        {item.location}
       </p>
@@ -113,7 +112,7 @@ export default function Carousel() {
        width={item.overlayWidth}
        height={item.overlayHeight}
        quality={100}
-       className={`absolute bottom-0 right-0 brightness-50 ${
+       className={`absolute bottom-0 right-0 brightness-50 z-10 ${
         item.overlay === '/assets/overlay-ayat-1.png'
          ? 'right-[100px]'
          : 'right-0'
@@ -123,7 +122,7 @@ export default function Carousel() {
     ))}
    </div>
 
-   <div className="w-full h-full inset-0 absolute">
+   <div className="w-full h-full inset-0 absolute z-30">
     <div className="flex items-center h-full w-full justify-between">
      <button
       type="button"
