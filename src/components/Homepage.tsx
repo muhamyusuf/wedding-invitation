@@ -1,8 +1,5 @@
-'use client';
-
 import localFont from 'next/font/local';
 import MaxWidthWrapper from './MaxWidthWrapper';
-import { motion } from 'framer-motion';
 
 const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
 const lemonMilkLight = localFont({
@@ -21,10 +18,7 @@ export default function HomePage({ recepient }: params) {
   <main className=" bg-[url('/assets/background.png')] bg-cover bg-no-repeat bg-center">
    <MaxWidthWrapper className="flex relative min-h-screen flex-col items-center justify-around p-2 md:p-5">
     <div className="flex justify-center items-center flex-col">
-     <motion.h1
-      initial={{ opacity: 0, scale: 0.5 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1, ease: 'easeInOut' }}
+     <h1
       className={`${spumoni.className} flex flex-col justify-center items-center`}
      >
       <span className="text-2xl md:text-5xl">The Wedding Of</span>
@@ -32,16 +26,9 @@ export default function HomePage({ recepient }: params) {
        <span className="text-[75px] md:text-[115px]">R</span>IZKY &{' '}
        <span className="text-[75px] md:text-[115px]">D</span>INDA
       </span>
-     </motion.h1>
+     </h1>
 
-     <motion.p
-      initial={{ y: 100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
-      className={`${lemonMilkLight.className} mt-10`}
-     >
-      24 FEBRUARI 2024
-     </motion.p>
+     <p className={`${lemonMilkLight.className} mt-10`}>24 FEBRUARI 2024</p>
     </div>
 
     <p className={`${lemonMilkRegular.className} md:text-[24px]`}>
