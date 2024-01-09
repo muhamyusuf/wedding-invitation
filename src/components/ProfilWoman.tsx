@@ -37,7 +37,10 @@ export default function ProfilWoman() {
        <br /> <br />I love you a lot and it &#x2019; s always been you
       </p>
 
-      <Link className="md:self-end" href="https://www.instagram.com/dindasdf_/">
+      <Link
+       className="md:self-end self-center"
+       href="https://www.instagram.com/dindasdf_/"
+      >
        <button
         className={`flex group gap-5 border-2 items-center mt-10 bg-transoarent py-2 px-5 font-serif text-[16px]`}
        >

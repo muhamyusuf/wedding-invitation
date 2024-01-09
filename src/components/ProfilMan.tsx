@@ -54,7 +54,7 @@ export default function ProfilMan() {
       </p>
 
       <Link
-       className="md:self-start"
+       className="md:self-start self-center"
        href="https://www.instagram.com/rizkygifarii/"
       >
        <button
