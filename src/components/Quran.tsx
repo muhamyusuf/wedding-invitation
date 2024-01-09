@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import Carousel from './ui/Carousel';
+import MaxWidthWrapper from './MaxWidthWrapper';
 
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
