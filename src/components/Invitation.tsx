@@ -1,8 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import MaxWidthWrapper from './MaxWidthWrapper';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
 const lemonMilkRegular = localFont({
@@ -13,10 +18,23 @@ const lemonMilkBold = localFont({
 });
 
 export default function Invitation() {
+ const viewRef = useRef(null);
+ const isInView = useInView(viewRef, { once: true });
+
  return (
   <main className="bg-[url('/assets/background-invitation.png')] bg-cover bg-no-repeat bg-center">
    <MaxWidthWrapper className="flex relative min-h-screen p-2 md:p-20 h-full flex-col">
-    <div className="flex xl:absolute flex-col justify-center items-center h-[80%] top-50 flex-2">
+    <motion.div
+     transition={{ duration: 0.7, ease: 'easeInOut' }}
+     ref={viewRef}
+     initial={{ opacity: 0, y: 100, scale: 0.5 }}
+     animate={
+      isInView
+       ? { opacity: 1, y: 0, scale: 1 }
+       : { opacity: 0, y: 100, scale: 0.5 }
+     }
+     className="flex xl:absolute flex-col justify-center items-center h-[80%] top-50 flex-2"
+    >
      <Image
       src="/assets/overlay-invitation.png"
       alt="overlay-invitation"
@@ -26,11 +44,17 @@ export default function Invitation() {
      />
 
      <p className={`${spumoni.className} text-[45px]`}>Wedding event</p>
-    </div>
+    </motion.div>
 
     <div className="flex flex-wrap justify-end items-start gap-2">
      <div className="flex justify-center items-center gap-2 flex-wrap relative w-full lg:w-fit">
-      <div className="overflow-hidden">
+      <motion.div
+       ref={viewRef}
+       initial={{ opacity: 0, y: 100 }}
+       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+       transition={{ duration: 1, ease: 'easeInOut' }}
+       className="overflow-hidden"
+      >
        <Image
         src="/assets/invitation-1.png"
         alt="invitation-1"
@@ -39,9 +63,15 @@ export default function Invitation() {
         quality={100}
         className="w-full lg:max-w-[516px] bg-cover h-[339px] lg:h-[360px] border"
        />
-      </div>
+      </motion.div>
 
-      <div className="bg-[#109CEB] lg:max-w-[443px] max-w-[516px] flex-grow-0 min-h-[339px] flex flex-col overflow-hidden border-[3px] h-fill relative">
+      <motion.div
+       ref={viewRef}
+       initial={{ opacity: 0, y: 100 }}
+       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+       transition={{ duration: 1, ease: 'easeInOut', delay: 0.5 }}
+       className="bg-[#109CEB] lg:max-w-[443px] max-w-[516px] flex-grow-0 min-h-[339px] flex flex-col overflow-hidden border-[3px] h-fill relative"
+      >
        <iframe
         width="fill"
         height="248"
@@ -64,11 +94,17 @@ export default function Invitation() {
          quality={100}
         />
        </div>
-      </div>
+      </motion.div>
      </div>
 
      <div className="flex justify-center gap-2 flex-wrap lg:max-w-[967px]">
-      <div className="bg-[#109CEB] max-w-[516px] min-h-[400px] flex flex-col justify-around px-5 md:md:px-10 py-5 border-[3px] md:max-w-[680px] h-fill relative">
+      <motion.div
+       ref={viewRef}
+       initial={{ opacity: 0, y: 100 }}
+       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+       transition={{ duration: 1, ease: 'easeInOut', delay: 0.8 }}
+       className="bg-[#109CEB] max-w-[516px] min-h-[400px] flex flex-col justify-around px-5 md:md:px-10 py-5 border-[3px] md:max-w-[680px] h-fill relative"
+      >
        <h2 className={`${lemonMilkBold.className} text-[32px] z-20`}>
         RESEPSI
        </h2>
@@ -110,9 +146,15 @@ export default function Invitation() {
          quality={100}
         />
        </div>
-      </div>
+      </motion.div>
 
-      <div className="max-w-[516px]">
+      <motion.div
+       ref={viewRef}
+       initial={{ opacity: 0, y: 100 }}
+       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+       transition={{ duration: 1, ease: 'easeInOut', delay: 1 }}
+       className="max-w-[516px]"
+      >
        <Image
         className="flex-grow sm:flex-grow-0 md:w-[279px] md:h-[396px]"
         src="/assets/invitation-4.png"
@@ -121,7 +163,7 @@ export default function Invitation() {
         height={1579}
         quality={100}
        />
-      </div>
+      </motion.div>
      </div>
     </div>
    </MaxWidthWrapper>

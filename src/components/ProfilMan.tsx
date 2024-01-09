@@ -1,8 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { Instagram, MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import MaxWidthWrapper from './MaxWidthWrapper';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
@@ -10,15 +15,20 @@ const kefirRegular = localFont({
 const lemonMilkLight = localFont({
  src: './font/lemon-milk/LEMONMILK-Light.otf',
 });
-const lemonMilkRegular = localFont({
- src: './font/lemon-milk/LEMONMILK-Regular.otf',
-});
 
 export default function ProfilMan() {
+ const viewRef = useRef(null);
+ const isInView = useInView(viewRef, { once: true });
+
  return (
   <main className="bg-[url('/assets/background-profilMan.png')] bg-cover bg-no-repeat bg-center border-y-2">
    <MaxWidthWrapper className="flex flex-wrap relative min-h-screen items-center justify-around px-2 md:px-0 py-20 md:p-5">
-    <div>
+    <motion.div
+     ref={viewRef}
+     initial={{ opacity: 0, x: -100 }}
+     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
+     transition={{ duration: 1, ease: 'easeInOut' }}
+    >
      <Image
       className="w-[300px] h-full md:w-[340px]"
       src="/assets/profile-man.png"
@@ -27,9 +37,15 @@ export default function ProfilMan() {
       height={479}
       quality={100}
      />
-    </div>
+    </motion.div>
 
-    <div className="md:max-w-[50%] w-full [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] flex flex-col items-center justify-center gap-10 text-center md:text-start z-20">
+    <motion.div
+     ref={viewRef}
+     initial={{ opacity: 0, y: 100 }}
+     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+     transition={{ duration: 1, ease: 'easeInOut' }}
+     className="md:max-w-[50%] w-full [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] flex flex-col items-center justify-center gap-10 text-center md:text-start z-20"
+    >
      <p
       className={`flex flex-col text-xl items-center justify-center md:justify-start md:items-start leading-7 ${lemonMilkLight.className} w-full mt-10 md:mt-0`}
      >
@@ -68,7 +84,7 @@ export default function ProfilMan() {
        </button>
       </Link>
      </div>
-    </div>
+    </motion.div>
 
     <Image
      className="absolute opacity-50 md:opacity-100 z-10 bottom-0 right-10"

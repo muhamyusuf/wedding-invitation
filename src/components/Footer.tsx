@@ -8,6 +8,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/Sheet';
 import { MoveRight } from 'lucide-react';
 import MaxWidthWrapper from './MaxWidthWrapper';
 
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
+
 const spumoni = localFont({ src: './font/spumoni/spumoni-reguler.ttf' });
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
@@ -41,6 +44,9 @@ const Gift = [
 ];
 
 export default function Footer() {
+ const viewRef = useRef(null);
+ const isInView = useInView(viewRef, { once: true });
+
  const [formValues, setFormValues] = useState({
   Nama: '',
   Keterangan: '',
@@ -213,7 +219,17 @@ export default function Footer() {
      </div>
     </div>
 
-    <div className="absolute z-10 top-0 right-10 hidden lg:block">
+    <motion.div
+     ref={viewRef}
+     initial={{ opacity: 0, scale: 0.5, y: 100 }}
+     animate={
+      isInView
+       ? { opacity: 1, scale: 1, y: 0 }
+       : { opacity: 0, scale: 0.5, y: 100 }
+     }
+     transition={{ duration: 1, ease: 'easeInOut' }}
+     className="absolute z-10 top-0 right-10 hidden lg:block"
+    >
      <Image
       src="/assets/footer-overlay.png"
       alt="footer-overlay"
@@ -221,7 +237,7 @@ export default function Footer() {
       height={583}
       quality={100}
      />
-    </div>
+    </motion.div>
 
     <div className="flex flex-col w-full items-center mt-5">
      <div

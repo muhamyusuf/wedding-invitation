@@ -1,8 +1,13 @@
+'use client';
+
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { Instagram, MoveRight } from 'lucide-react';
 import Link from 'next/link';
 import MaxWidthWrapper from './MaxWidthWrapper';
+
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 const kefirRegular = localFont({
  src: './font/kefir/Kefir-Regular.otf',
@@ -12,10 +17,19 @@ const lemonMilkLight = localFont({
 });
 
 export default function ProfilWoman() {
+ const viewRef = useRef(null);
+ const isInView = useInView(viewRef, { once: true });
+
  return (
   <main className="bg-[url('/assets/background-profilWoman.png')] bg-cover bg-no-repeat bg-center">
    <MaxWidthWrapper className="flex flex-wrap relative min-h-screen items-center justify-around px-2 md:px-0 py-20 md:p-5">
-    <div className="md:max-w-[50%] w-full [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] flex flex-col items-center justify-center md:items-end gap-10 text-center z-20 md:text-start">
+    <motion.div
+     ref={viewRef}
+     initial={{ opacity: 0, y: 100 }}
+     animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+     transition={{ duration: 1, ease: 'easeInOut' }}
+     className="md:max-w-[50%] w-full [text-shadow:_0_1px_0_rgb(0_0_0_/_40%)] flex flex-col items-center justify-center md:items-end gap-10 text-center z-20 md:text-start"
+    >
      <p
       className={`flex flex-col text-xl text-center md:text-end items-center md:items-end justify-center md:justify-end leading-7 ${lemonMilkLight.className}`}
      >
@@ -52,9 +66,15 @@ export default function ProfilWoman() {
        </button>
       </Link>
      </div>
-    </div>
+    </motion.div>
 
-    <div className="mt-10 md:mt-0">
+    <motion.div
+     ref={viewRef}
+     initial={{ opacity: 0, x: 100 }}
+     animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 100 }}
+     transition={{ duration: 1, ease: 'easeInOut' }}
+     className="mt-10 md:mt-0"
+    >
      <Image
       src="/assets/profile-woman.png"
       alt="profil-woman"
@@ -62,7 +82,7 @@ export default function ProfilWoman() {
       height={479}
       quality={100}
      />
-    </div>
+    </motion.div>
 
     <Image
      className="absolute opacity-50 md:opacity-100 z-10 top-0 left-10"
