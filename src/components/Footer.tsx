@@ -1,3 +1,7 @@
+'use client';
+
+import { useState } from 'react';
+
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/Sheet';
@@ -37,6 +41,50 @@ const Gift = [
 ];
 
 export default function Footer() {
+ const [formValues, setFormValues] = useState({
+  Nama: '',
+  Keterangan: '',
+  Pesan: '',
+ });
+
+ const handleChange = (e: any) => {
+  const { name, value } = e.target;
+  setFormValues((prevValues) => ({
+   ...prevValues,
+   [name]: value,
+  }));
+ };
+
+ const handleSubmit = async (e: any) => {
+  e.preventDefault();
+
+  try {
+   const response = await fetch(
+    'https://script.google.com/macros/s/AKfycby5C7JtMxdjwjWeWN9k9lEvPOOt0Xka75TXY-1dBCvBhNY2qZ6dg4OFgwkAEyWvbUou/exec',
+    {
+     method: 'POST',
+     headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+     },
+     body: new URLSearchParams(formValues),
+    },
+   );
+
+   // You can also reset the form after successful submission
+   setFormValues({
+    Nama: '',
+    Keterangan: '',
+    Pesan: '',
+   });
+
+   // Handle success response
+   alert('Terimakasih, Pesan Anda Telah Terkirim!');
+  } catch (error) {
+   // Handle error (e.g., show error message)
+   console.error(error);
+  }
+ };
+
  return (
   <footer className="bg-[#1C1C26]">
    <MaxWidthWrapper className=" flex flex-col px-5 md:px-10 pb-10 items-center relative w-full">
@@ -50,34 +98,44 @@ export default function Footer() {
        </p>
 
        <form
-        action="#"
+        onSubmit={handleSubmit}
         className={`${lemonMilkRegular.className} w-[250px] min-[375px]:w-[300px] min-[425px]:w-[350px] relative text-white flex gap-3 flex-col mt-5`}
        >
         <input
          type="text"
          id="name"
+         name="Nama"
          placeholder="Nama"
          className="border bg-transparent px-2 py-1 rounded-sm placeholder:text-white focus:none outline-none"
+         onChange={handleChange}
+         value={formValues.Nama}
         />
 
         <input
          type="text"
          id="keterangan"
+         name="Keterangan"
          placeholder="Keterangan"
          className="border bg-transparent px-2 py-1 rounded-sm placeholder:text-white focus:none outline-none"
+         onChange={handleChange}
+         value={formValues.Keterangan}
         />
 
         <textarea
          className="border min-h-[260px] bg-transparent px-2 py-1 rounded-sm placeholder:text-white focus:none outline-none"
-         name="pesan"
+         name="Pesan"
          id="pesan"
          placeholder="Pesan"
          cols={30}
          rows={10}
+         onChange={handleChange}
+         value={formValues.Pesan}
         />
 
         <button
          className={`flex group gap-5 border text-sm absolute right-0 -bottom-14 bg-[#FC571D] py-2 px-5 ${lemonMilkRegular.className}`}
+         type="submit"
+         name="submit"
         >
          Submit
          <span className="group-hover:translate-x-2 -mt-[2px] duration-200 ease-in-out">
