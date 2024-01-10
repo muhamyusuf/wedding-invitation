@@ -14,6 +14,7 @@
     "class-variance-authority": "^0.7.0",
     "classnames": "^2.5.1",
     "clsx": "^2.1.0",
+    "copy-to-clipboard": "^3.3.3",
     "embla-carousel-autoplay": "8.0.0-rc18",
     "embla-carousel-react": "8.0.0-rc18",
     "framer-motion": "^10.17.9",

@@ -5,8 +5,9 @@ import { useState } from 'react';
 import Image from 'next/image';
 import localFont from 'next/font/local';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/Sheet';
-import { MoveRight } from 'lucide-react';
+import { MoveRight, Copy } from 'lucide-react';
 import MaxWidthWrapper from './MaxWidthWrapper';
+import CopyToClipboard from 'copy-to-clipboard';
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
@@ -193,8 +194,14 @@ export default function Footer() {
             />
            </div>
            <div className={`${lemonMilkLight.className} mt-10 md:mt-20`}>
-            <p className="text-[20px] text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400">
+            <p className="text-[20px] flex items-baseline text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400 gap-4">
              {item.nomor}
+             <button
+              onClick={() => CopyToClipboard(item.nomor)}
+              className="cursor-pointer text-white bg-white/20 rounded-md p-2"
+             >
+              <Copy className="w-3 h-3" />
+             </button>
             </p>
             <p className="text-[16px] text-transparent bg-clip-text bg-gradient-to-r from-white to-orange-400">
              {item.nama}
