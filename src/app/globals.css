@@ -19,20 +19,3 @@
 body {
  color: white;
 }
-
-.disc-animation {
- animation: disc-spin 10s linear infinite;
-}
-
-.disc-animation.paused {
- animation-play-state: paused;
-}
-
-@keyframes disc-spin {
- from {
-  transform: rotate(0deg);
- }
- to {
-  transform: rotate(360deg);
- }
-}

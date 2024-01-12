@@ -11,8 +11,8 @@ import AnimatedDisc from '@/components/AnimatedDisc/AnimatedDisc';
 export default function Home() {
  return (
   <div>
-   <AnimatedDisc />
    <HomePage />
+   <AnimatedDisc />
    <ProfilMan />
    <ProfilWoman />
    <Quran />

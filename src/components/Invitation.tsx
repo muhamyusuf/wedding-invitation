@@ -111,7 +111,7 @@ export default function Invitation() {
 
        <div className="z-20">
         <p className={`${spumoni.className} text-[36px]`}>
-         Minggu 24 Febuari 2024
+         Sabtu 24 Febuari 2024
         </p>
         <p className={`${lemonMilkRegular.className} text-[16px]`}>
          11.00 WIB - 14.00 WIB

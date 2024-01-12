@@ -152,7 +152,7 @@ export default function Carousel() {
     </div>
    </div>
 
-   <div className="flex items-center z-50 justify-center w-full mt-3 absolute bottom-0 mx-auto pt-5 pb-2">
+   <div className="flex items-center z-40 justify-center w-full mt-3 absolute bottom-0 mx-auto pt-5 pb-2">
     {QuranData.map((_, index) => (
      <button
       key={index}
