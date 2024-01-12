@@ -28,6 +28,7 @@ export default function ProfilMan() {
      initial={{ opacity: 0, x: -100 }}
      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 }}
      transition={{ duration: 1, ease: 'easeInOut' }}
+     className="border-2 border-white"
     >
      <Image
       className="w-[300px] h-full md:w-[340px]"
