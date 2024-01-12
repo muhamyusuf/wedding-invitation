@@ -14,6 +14,8 @@ type params = {
 };
 
 export default function HomePage({ recepient }: params) {
+ const recepientName = recepient ? decodeURIComponent(recepient) : 'Guest';
+
  return (
   <main className=" bg-[url('/assets/background.png')] bg-cover bg-no-repeat bg-center">
    <MaxWidthWrapper className="flex relative min-h-screen flex-col items-center justify-around p-2 md:p-5">
@@ -32,7 +34,7 @@ export default function HomePage({ recepient }: params) {
     </div>
 
     <p className={`${lemonMilkRegular.className} md:text-[24px]`}>
-     DEAR/TO {`${recepient ? recepient : 'Guest'}`}
+     DEAR/TO {recepientName}
     </p>
    </MaxWidthWrapper>
   </main>
