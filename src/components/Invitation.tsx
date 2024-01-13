@@ -114,7 +114,7 @@ export default function Invitation() {
          Sabtu 24 Febuari 2024
         </p>
         <p className={`${lemonMilkRegular.className} text-[16px]`}>
-         11.00 WIB - 14.00 WIB
+         10.00 WIB - 17.00 WIB
         </p>
        </div>
 
